@@ -18,7 +18,7 @@ int main(int argc, char** argv) {
   histSize[0] = 256;
   hranges[0] = 0.0;
   hranges[1] = 256.0;
-  ranges[0] = hranges;
+  ranges[9] = hranges;
   channels[0] = 0;
   Mat image = imread(pics, cv::IMREAD_GRAYSCALE);
   Mat hist;
@@ -38,12 +38,11 @@ int main(int argc, char** argv) {
   		  1);
   	}
   }
-  for (int i=0; i<hist.rows; i++) {
+  for (int i=0; i<256; i++) {
   	cout << "Value " << i << " = " 
   	    << hist.at<float>(i) << "\n";
   }
   namedWindow("histogram");
   imshow("histogram", histImg);
-  cv::waitKey(0);
 	return 0;
 }
