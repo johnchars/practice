@@ -70,6 +70,8 @@ target_link_libraries( map_container
 
 add_executable(vector_element src/vector.cc)
 
+add_executable(geometry src/geometry.cc)
+
 #############
 ## Testing ##
 #############

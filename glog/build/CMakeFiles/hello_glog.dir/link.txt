@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/hello_glog.dir/src/hello_glog.cc.o  -o hello_glog -Wl,-Bstatic -lglog -lgflags -Wl,-Bdynamic -lpthread /usr/lib/x86_64-linux-gnu/libunwind.so.8.0.1 

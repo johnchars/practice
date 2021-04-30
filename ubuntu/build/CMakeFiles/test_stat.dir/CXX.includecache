@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cwj/foo_ws/src/practice/ubuntu/src/test_stat.cc
+sys/types.h
+-
+sys/stat.h
+-
+time.h
+-
+stdio.h
+-
+stdlib.h
+-
+iostream
+-
+fstream
+-
+

@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cwj/foo_ws/src/practice/glog/src/hello_glog.cc
+glog/logging.h
+/home/cwj/foo_ws/src/practice/glog/src/glog/logging.h
+iostream
+-
+
