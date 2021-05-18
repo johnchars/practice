@@ -17,7 +17,9 @@ int main(int argc, char** argv) {
       std::cout << "file doesn't exits.\n";
       return 1;
     }
+  std::cout << "loadfile failed.\n";
   YAML::Node config = YAML::LoadFile(config_file);
+  std::cout << "loadfile success.\n";
   if (config["time"]) {
     std::cout << "time " << config["time"].as<std::string>() << "\n";
   }
@@ -34,6 +36,19 @@ int main(int argc, char** argv) {
       std::cout << "update: " << last << ", " << now << "\n";
     std::cout << "left_radius: " << config["left_radius"].as<double>() << "\n";
     std::cout << "right_radius: " << config["right_radius"].as<double>() << "\n";
+  }
+  std::cout << "start invalid.\n";
+  bool flag = false;
+  if (config["invalid"]) {
+    std::cout << "invalid: " << config["invalid"].as<string>() << "\n";
+    flag = true;
+  } else {
+    std::cout << "Read invalid value error.\n";
+  }
+  if (!flag) {
+    std::cout << "invalid: " << config["invalid"].as<float>() << "\n";
+  } else {
+    std::cout << "Read invalid value error.\n";
   }
   return 0;
 }
