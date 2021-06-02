@@ -10,8 +10,10 @@ project(ros_practice)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
+  tf
   tf2
   tf2_ros
+  sensor_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -172,6 +174,18 @@ target_link_libraries(tf_publisher
 
 add_executable(time_monitor src/rostime.cc)
 target_link_libraries(time_monitor
+  ${catkin_LIBRARIES}
+  ${PROJECT_NAME}
+)
+
+add_executable(tf_time_check src/tf_time_check.cc)
+target_link_libraries(tf_time_check
+  ${catkin_LIBRARIES}
+  ${PROJECT_NAME}
+)
+
+add_executable(tf1_listener src/tf1_listener.cc)
+target_link_libraries(tf1_listener
   ${catkin_LIBRARIES}
   ${PROJECT_NAME}
 )

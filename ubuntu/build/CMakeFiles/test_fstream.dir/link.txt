@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/test_fstream.dir/src/test_fstream.cc.o  -o test_fstream 
