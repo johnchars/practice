@@ -10,3 +10,5 @@ add_executable(test_time src/test_time.cc)
 add_executable(test_fstream src/test_fstream.cc)
 
 add_executable(datatype src/datatype.cc)
+
+add_executable(rand src/rand.cc)

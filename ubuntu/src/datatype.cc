@@ -2,6 +2,10 @@
 
 using namespace std;
 
+void func(void *ptr) {
+  cout << "call nullptr args.\n";
+}
+
 int main(int argc, char** argv) {
   int hundred = 100;
   uint8_t foo;
@@ -13,5 +17,12 @@ int main(int argc, char** argv) {
 
   foo = hundred;
   std::cout << "foo: " << foo << ", value=100\n";
+
+  int * a = new int(10);
+
+  // func();
+  func(a);
+  delete a;
+
   return 0;
 }
